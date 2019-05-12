@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Log.d("Sign Up", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(MainActivity.this, user.getEmail() + " has logged In", Toast.LENGTH_SHORT).show();
+                            Util.navigateTo(UserActivity.class, MainActivity.this);
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Log.d("Sign In", "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(MainActivity.this, user.getEmail() + " has logged In", Toast.LENGTH_SHORT).show();
-
+                            Util.navigateTo(UserActivity.class, MainActivity.this);
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

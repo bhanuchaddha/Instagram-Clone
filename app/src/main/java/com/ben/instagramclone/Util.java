@@ -1,12 +1,11 @@
 package com.ben.instagramclone;
 
 import android.content.Context;
-import android.view.inputmethod.InputMethodManager;
-
-import static android.content.Context.INPUT_METHOD_SERVICE;
-import static android.support.v4.content.ContextCompat.getSystemService;
+import android.content.Intent;
 
 public class Util {
 
-
+public static <T> void navigateTo(Class<T> clazz, Context context){
+    context.startActivity(new Intent(context, clazz));
+}
 }
